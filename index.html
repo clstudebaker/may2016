@@ -1,0 +1,31 @@
+<!doctype html>
+<html data-ng-app="">
+
+
+
+    <head>
+        <title>using angular js directives and data binding</title>
+        <script src="basicjs.js"></script>
+        <script src="angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="angular.css">
+    </head>
+
+
+
+    <body data-ng-init="customers=[{name:'John Smith',city:'Phoenix'},{name:'John Doe',city:'Indianapolis'},{name:'Jane Doe',city:'Seattle'}]">
+    Name:<br/>
+    <input type="text" data-ng-model="name"/><br/>
+
+<ul>
+    <li data-ng-repeat="cust in customers|filter:name|orderBy:'city'">{{cust.name}} - {{cust.city}}</li>
+</ul>
+
+
+    
+    </body>
+
+
+
+
+
+</html>
